@@ -4,7 +4,7 @@
 yum install -y httpd
 
 # Copy Apache Dot Net Module for Reverse Proxy
-sudo cp dotnet.conf /etc/httpd/conf/httpd.conf
+sudo cp dotnet.conf /etc/httpd/conf.d/dotnet.conf
 
 ## Install Dot Net Core
 sudo yum install libunwind libicu
