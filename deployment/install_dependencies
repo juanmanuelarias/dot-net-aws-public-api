@@ -4,11 +4,11 @@
 yum install -y httpd
 
 # Copy Apache Dot Net Module for Reverse Proxy
-cp dotnet.conf /etc/httpd/conf/httpd.conf
+sudo cp dotnet.conf /etc/httpd/conf/httpd.conf
 
 ## Install Dot Net Core
 sudo yum install libunwind libicu
-curl -sSL -o dotnet.tar.gz https://go.microsoft.com/fwlink/?linkid=847103
+sudo curl -sSL -o dotnet.tar.gz https://go.microsoft.com/fwlink/?linkid=847103
 sudo mkdir -p /opt/dotnet && sudo tar zxf dotnet.tar.gz -C /opt/dotnet
 sudo ln -s /opt/dotnet/dotnet /usr/local/bin
 
