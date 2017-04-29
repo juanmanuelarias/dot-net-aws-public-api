@@ -13,4 +13,4 @@ sudo mkdir -p /opt/dotnet && sudo tar zxf dotnet.tar.gz -C /opt/dotnet
 sudo ln -s /opt/dotnet/dotnet /usr/local/bin
 
 ## Instal Project Dependencies
-dotnet restore ..\PublicAPI\
+dotnet restore ../PublicAPI/
