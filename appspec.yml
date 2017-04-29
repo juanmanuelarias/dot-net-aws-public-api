@@ -2,26 +2,25 @@ version: 0.0
 os: linux
 files:
   - source: /PublicAPI/
-    destination: /var/www/html
-  - source: /deployment/dotnet.conf
+    destination: /var/dotnetapp/source
+  - source: /deployment/assets/dotnet.conf
     destination: /etc/httpd/conf.d/dotnet.conf
+  - source: /deployment/assets/kestrel-app.service
+    destination: /etc/systemd/system/kestrel-app.service
 hooks:
   ApplicationStop:
-    - location: deployment/stop_server
+    - location: /deployment/scripts/stop_server
       timeout: 300
       runas: root
   BeforeInstall:
-    - location: deployment/install_dependencies
+    - location: /deployment/scripts/install_dependencies
       timeout: 300
       runas: root
   AfterInstall:
-    - location: deployment/start_server
-      timeout: 300
-      runas: root
-    - location: deployment/restore_packages
+    - location: /deployment/scripts/build
       timeout: 300
       runas: root
   ApplicationStart:
-    - location: deployment/run_application
+    - location: /deployment/scripts/start_server
       timeout: 300
       runas: root

@@ -1,0 +1,9 @@
+#!/bin/bash
+
+cd /var/dotnetapp/source
+
+# Restore Packagse
+dotnet restore
+
+# Publish
+dotnet publish -c Release -o /var/dotnetapp/release

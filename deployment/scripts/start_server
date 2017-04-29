@@ -1,0 +1,7 @@
+#!/bin/bash
+
+# Start Apache
+service httpd start
+
+# Enable dot net core app service
+systemctl enable kestrel-app.service

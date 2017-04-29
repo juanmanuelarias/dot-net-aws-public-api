@@ -1,4 +1,0 @@
-#!/bin/bash
-
-# Start Apache
-service httpd start
