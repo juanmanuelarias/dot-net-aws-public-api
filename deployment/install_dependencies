@@ -11,6 +11,3 @@ sudo yum install libunwind libicu
 sudo curl -sSL -o dotnet.tar.gz https://go.microsoft.com/fwlink/?linkid=847103
 sudo mkdir -p /opt/dotnet && sudo tar zxf dotnet.tar.gz -C /opt/dotnet
 sudo ln -s /opt/dotnet/dotnet /usr/local/bin
-
-## Instal Project Dependencies
-dotnet restore ../PublicAPI/
