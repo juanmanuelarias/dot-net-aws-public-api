@@ -1,7 +1,7 @@
 version: 0.0
 os: linux
 files:
-  - source: ../PublicAPI/
+  - source: /PublicAPI/
     destination: /var/www/html
   - source: /deployment/dotnet.conf
     destination: /tmp/codedeploy-staging/
