@@ -1,0 +1,8 @@
+#!/bin/bash
+
+# Start Apache
+service httpd start
+
+# Run Dot Net Core Server
+cd ..\PublicAPI
+dotnet run
