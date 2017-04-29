@@ -4,7 +4,7 @@ files:
   - source: /PublicAPI/
     destination: /var/www/html
   - source: /deployment/dotnet.conf
-    destination: /tmp/codedeploy-staging/
+    destination: /etc/httpd/conf.d/dotnet.conf
 hooks:
   ApplicationStop:
     - location: deployment/stop_server
@@ -14,10 +14,10 @@ hooks:
     - location: deployment/install_dependencies
       timeout: 300
       runas: root
+  AfterInstall:
     - location: deployment/start_server
       timeout: 300
       runas: root
-  AfterInstall:
     - location: deployment/restore_packages
       timeout: 300
       runas: root
