@@ -4,9 +4,9 @@ files:
   - source: /PublicAPI/
     destination: /var/dotnetapp/source
   - source: /deployment/assets/dotnet.conf
-    destination: /etc/httpd/conf.d/dotnet.conf
+    destination: /etc/httpd/conf.d/
   - source: /deployment/assets/kestrel-app.service
-    destination: /etc/systemd/system/kestrel-app.service
+    destination: /etc/systemd/system/
 hooks:
   ApplicationStop:
     - location: /deployment/scripts/stop_server
