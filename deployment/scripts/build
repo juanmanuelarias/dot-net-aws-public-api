@@ -1,7 +1,0 @@
-#!/bin/bash
-
-# Restore Packagse
-sudo /usr/local/bin/dotnet restore /var/dotnetapp/source
-
-# Publish
-sudo /usr/local/bin/dotnet publish /var/dotnetapp/source -c Release -o /var/dotnetapp/release
