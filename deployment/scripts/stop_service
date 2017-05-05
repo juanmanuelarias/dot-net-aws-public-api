@@ -1,0 +1,4 @@
+#!/bin/bash
+
+# Stop Service
+sudo supervisorctl stop aspnetcore

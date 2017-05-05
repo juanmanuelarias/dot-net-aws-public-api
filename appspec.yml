@@ -3,8 +3,14 @@ os: linux
 files:
   - source: /PublicAPI/
     destination: /home/ubuntu/dotnetapp/source
+  - source: /deployment/assets/publicapi.conf
+    destination: /etc/supervisor/conf.d/
 hooks:
+  BeforeInstall:
+    - location: /deployment/scripts/stop_service
+      timeout: 300
+      runas: root
   AfterInstall:
-    - location: /scripts/after_install
+    - location: /deployment/scripts/deploy_app
       timeout: 300
       runas: root
