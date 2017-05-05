@@ -1,13 +1,13 @@
 #!/bin/bash
 
 # Restore Packages
-sudo /usr/bin/dotnet restore ~/dotnetapp/source
+sudo /usr/bin/dotnet restore /home/ubuntu/source
 
 # Stop Service
 sudo supervisorctl stop aspnetcore
 
 # Build and Publish
-sudo /usr/bin/dotnet publish ~/dotnetapp/source -c Release -o /var/dotnetapp/
+sudo /usr/bin/dotnet publish /home/ubuntu/source -c Release -o /var/dotnetapp/
 
 # Start Service
 sudo supervisorctl start aspnetcore

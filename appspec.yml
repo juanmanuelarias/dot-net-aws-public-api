@@ -2,7 +2,7 @@ version: 0.0
 os: linux
 files:
   - source: /PublicAPI/
-    destination: ~/dotnetapp/source
+    destination: /home/ubuntu/dotnetapp/source
 hooks:
   AfterInstall:
     - location: /scripts/after_install
