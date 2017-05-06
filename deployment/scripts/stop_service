@@ -4,4 +4,4 @@
 sudo supervisorctl stop aspnetcore
 
 ## Delete Service Configuration, since it will be recreated
-sudo rm -f/etc/supervisor/conf.d/publicapi.conf
+sudo rm -f /etc/supervisor/conf.d/publicapi.conf
