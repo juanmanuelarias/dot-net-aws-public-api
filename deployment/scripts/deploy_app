@@ -9,3 +9,4 @@ sudo /usr/bin/dotnet publish /home/ubuntu/source -c Release -o /var/dotnetapp/
 # Start Service
 supervisorctl reread
 supervisorctl update
+sudo supervisorctl start aspnetcore
