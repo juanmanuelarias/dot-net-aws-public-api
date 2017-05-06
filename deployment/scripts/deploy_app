@@ -7,4 +7,5 @@ sudo /usr/bin/dotnet restore /home/ubuntu/source
 sudo /usr/bin/dotnet publish /home/ubuntu/source -c Release -o /var/dotnetapp/
 
 # Start Service
-sudo supervisorctl start aspnetcore
+supervisorctl reread
+supervisorctl update
